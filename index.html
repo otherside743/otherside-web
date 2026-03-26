@@ -381,97 +381,84 @@
                     </div>
 
                     <form action="https://forminit.com/f/t094yyx2th0" method="POST" class="apply-form" id="applicationForm">
-                        <div class="form-group">
-                            <label for="fullName">Full Name</label>
-                            <input 
-                                type="text" 
-                                id="fullName" 
-                                name="fullName" 
-                                placeholder="Enter your full name" 
-                                required
-                                autocomplete="name"
-                            >
-                            <span class="input-focus"></span>
-                        </div>
+    <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input 
+            type="text" 
+            id="fullName" 
+            name="fullName" 
+            placeholder="Enter your full name" 
+            required
+            autocomplete="name"
+        >
+        <span class="input-focus"></span>
+    </div>
 
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                placeholder="your@email.com" 
-                                required
-                                autocomplete="email"
-                            >
-                            <span class="input-focus"></span>
-                        </div>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="your@email.com" 
+            required
+            autocomplete="email"
+        >
+        <span class="input-focus"></span>
+    </div>
 
-                        <div class="form-group">
-                            <label for="skillArea">Skill Area</label>
-                            <div class="select-wrapper">
-                                <select id="skillArea" name="skillArea" required>
-                                    <option value="" disabled selected>Select your expertise</option>
-                                    <option value="AI">AI Workflow</option>
-                                    <option value="Tech">Tech Analysis</option>
-                                    <option value="Dev">Development</option>
-                                    <option value="Creative">Creative</option>
-                                </select>
-                                <span class="select-arrow">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="6 9 12 15 18 9"/>
-                                    </svg>
-                                </span>
-                            </div>
-                            <span class="input-focus"></span>
-                        </div>
+    <div class="form-group">
+        <label for="skillArea">Skill Area</label>
+        <div class="select-wrapper">
+            <select id="skillArea" name="skillArea" required>
+                <option value="" disabled selected>Select your expertise</option>
+                <option value="AI">AI Workflow</option>
+                <option value="Tech">Tech Analysis</option>
+                <option value="Dev">Development</option>
+                <option value="Creative">Creative</option>
+            </select>
+            <span class="select-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </span>
+        </div>
+        <span class="input-focus"></span>
+    </div>
 
-                        <div class="form-group">
-                            <label for="portfolio">Portfolio Link</label>
-                            <input 
-                                type="url" 
-                                id="portfolio" 
-                                name="portfolio" 
-                                placeholder="https://your-portfolio.com"
-                                autocomplete="url"
-                            >
-                            <span class="input-focus"></span>
-                        </div>
+    <div class="form-group">
+        <label for="portfolio">Portfolio Link</label>
+        <input 
+            type="url" 
+            id="portfolio" 
+            name="portfolio" 
+            placeholder="https://your-portfolio.com"
+            autocomplete="url"
+        >
+        <span class="input-focus"></span>
+    </div>
 
-                        <div class="form-group">
-                            <label for="message">Why Should We Pick You?</label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                placeholder="Be direct. What makes you valuable? What can you bring to the table?"
-                                rows="4"
-                                required
-                            ></textarea>
-                            <span class="input-focus"></span>
-                        </div>
+    <div class="form-group">
+        <label for="message">Why Should We Pick You?</label>
+        <textarea 
+            id="message" 
+            name="message" 
+            placeholder="Be direct. What makes you valuable?"
+            rows="4"
+            required
+        ></textarea>
+        <span class="input-focus"></span>
+    </div>
 
-                        <button type="submit" class="btn-submit" id="submitBtn">
-                            <span class="btn-text">Submit Application</span>
-                            <span class="btn-loader">
-                                <svg class="spinner" viewBox="0 0 24 24">
-                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="60" stroke-dashoffset="20"/>
-                                </svg>
-                                <span>Processing...</span>
-                            </span>
-                            <span class="btn-success">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span>Submitted!</span>
-                            </span>
-                            <span class="btn-glow"></span>
-                        </button>
+    <button type="submit" class="btn-submit" id="submitBtn">
+        <span class="btn-text">Submit Application</span>
+        <span class="btn-glow"></span>
+    </button>
 
-                        <p class="form-notice">
-                            By submitting, you confirm you're ready to deliver real results.
-                        </p>
-                    </form>
-
+    <p class="form-notice">
+        By submitting, you confirm you're ready to deliver real results.
+    </p>
+</form>
                     <!-- Success Message -->
                     <div class="form-success" id="formSuccess">
                         <div class="success-icon">
