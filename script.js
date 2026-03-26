@@ -358,7 +358,7 @@ function initAccessibility() {
  // ==========================================
 // Initialize Everything
 // ==========================================
-function init() {
+// function init() {
     initLoader();
     initCursor();
     initNavigation();
