@@ -7,7 +7,7 @@
 // Configuration
 // ==========================================
 const CONFIG = {
-    FORM_ENDPOINT: 'https://script.google.com/macros/s/AKfycbwYBzWJoGyosIybzZdd781Qxw0SZP-4D7UAy0haWqmMh1PxYYLGVrRs0haMaOW6w_Bu/exec',
+     FORM_ENDPOINT: 'https://forminit.com/f/t094yyx2th0',
     
     // Animation settings
     REVEAL_THRESHOLD: 0.15,
@@ -355,6 +355,7 @@ function initAccessibility() {
 }
 
 // ==========================================
+ // ==========================================
 // Initialize Everything
 // ==========================================
 function init() {
@@ -363,7 +364,7 @@ function init() {
     initNavigation();
     initRevealAnimations();
     initCounterAnimation();
-    initFormHandling();
+    // initFormHandling(); // Kill switch applied - HTML action takes over
     initParallax();
     setCurrentYear();
     initAccessibility();
@@ -377,70 +378,3 @@ if (document.readyState === 'loading') {
 } else {
     init();
 }
-
-// ==========================================
-// Google Apps Script Setup Instructions
-// ==========================================
-/*
- * To make the form work, you need to create a Google Apps Script:
- * 
- * 1. Go to https://script.google.com
- * 2. Create a new project
- * 3. Paste this code:
- * 
- * ---------------------------------------------
- * 
- * function doPost(e) {
- *   try {
- *     const data = JSON.parse(e.postData.contents);
- *     
- *     // Get or create spreadsheet
- *     const ss = SpreadsheetApp.openById('YOUR_SPREADSHEET_ID');
- *     // Or create new: SpreadsheetApp.create('OTHER-SIDE Applications');
- *     
- *     const sheet = ss.getSheetByName('Applications') || ss.insertSheet('Applications');
- *     
- *     // Add headers if first row
- *     if (sheet.getLastRow() === 0) {
- *       sheet.appendRow(['Timestamp', 'Full Name', 'Email', 'Skill Area', 'Portfolio', 'Message']);
- *     }
- *     
- *     // Append data
- *     sheet.appendRow([
- *       data.timestamp,
- *       data.fullName,
- *       data.email,
- *       data.skillArea,
- *       data.portfolio,
- *       data.message
- *     ]);
- *     
- *     // Send email notification
- *     GmailApp.sendEmail(
- *       'otherside743@gmail.com',
- *       'New Application: ' + data.fullName + ' - ' + data.skillArea,
- *       'New application received:\n\n' +
- *       'Name: ' + data.fullName + '\n' +
- *       'Email: ' + data.email + '\n' +
- *       'Skill: ' + data.skillArea + '\n' +
- *       'Portfolio: ' + data.portfolio + '\n\n' +
- *       'Message:\n' + data.message
- *     );
- *     
- *     return ContentService.createTextOutput(JSON.stringify({success: true}))
- *       .setMimeType(ContentService.MimeType.JSON);
- *       
- *   } catch (error) {
- *     return ContentService.createTextOutput(JSON.stringify({error: error.toString()}))
- *       .setMimeType(ContentService.MimeType.JSON);
- *   }
- * }
- * 
- * ---------------------------------------------
- * 
- * 4. Deploy > New Deployment > Web App
- * 5. Set "Who has access" to "Anyone"
- * 6. Copy the Web App URL
- * 7. Replace 'YOUR_GOOGLE_APPS_SCRIPT_URL_OR_WEBHOOK_URL' in CONFIG above
- * 
- */
